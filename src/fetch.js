@@ -1,4 +1,4 @@
-async function getWeather(location){
+export async function getWeather(location){
     try{
     const response=await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=JL8H64QJ9VQMPL23Q9BBMSDRK`);
     
@@ -13,4 +13,3 @@ async function getWeather(location){
         console.error(e);
     }
 }
-getWeather('mumbai');

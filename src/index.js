@@ -1,1 +1,1 @@
-console.log('Everything is working.')
+import "./fetch.js"

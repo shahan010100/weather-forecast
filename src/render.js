@@ -1,4 +1,5 @@
 import { getWeather } from "./fetch";
+import { ftoc, ctof } from "./ftoc";
 
 let wData;
 
@@ -6,6 +7,34 @@ const form=document.querySelector('form');
 const search=document.querySelector('#search');
 const loading=document.querySelector('.loading')
 const days=["day1", 'day2', 'day3', 'day4', 'day5', 'day6', 'day7'];
+const fahren=document.querySelector("#fahren");
+const celsius=document.querySelector("#celsius");
+celsius.addEventListener("click", ()=>{
+    
+    if(wData && !celsius.classList.contains("active"))
+    {
+        days.forEach(day=>{
+            const temp=document.querySelector(`#${day} .temp>span:nth-child(2)`);
+            let fahrenheit=temp.textContent;
+            temp.textContent=ftoc(fahrenheit);            
+        })
+    }
+    celsius.classList.add('active');
+    fahren.classList.remove('active');
+})
+fahren.addEventListener("click", ()=>{
+    
+    if(wData && !fahren.classList.contains("active"))
+    {
+        days.forEach(day=>{
+            const temp=document.querySelector(`#${day} .temp>span:nth-child(2)`);
+            let celsius=temp.textContent;
+            temp.textContent=ctof(celsius);            
+        })
+    }
+    celsius.classList.remove('active');
+    fahren.classList.add('active');
+})
 
 form.addEventListener('submit', async (e)=>{
     e.preventDefault();

@@ -48,6 +48,30 @@ form{
     padding-right:1rem;
     letter-spacing: 3px;
 }
+.convert{
+    display:grid;
+    grid-template: auto / 1fr 1fr;
+    background-color: white;
+    font-size:3rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    border-radius: 50px;
+    
+}
+#celsius{
+    padding: 1rem 2rem;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+#fahren{
+    padding: 1rem 2rem;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.active{
+    background-color: black;
+    color:white;
+}
 .loading{
     width:100%;
     font-size: 3rem;

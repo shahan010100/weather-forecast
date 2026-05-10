@@ -50,7 +50,13 @@ form.addEventListener('submit', async (e)=>{
     {
         const temp=selected.querySelector(".temp>span:nth-child(2)");
         temp.textContent="";
+        if(celsius.classList.contains('active'))
+        {
+            temp.textContent=ftoc(wData.days[i].temp);
+        }
+        else{
         temp.textContent=wData.days[i].temp;
+        }
 
         const condition=selected.querySelector(".temp>span:nth-child(3)");
         condition.textContent="";

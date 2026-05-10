@@ -2,3 +2,116 @@ body{
     margin:0;
     padding:0;
 }
+.searchBar{
+    display:flex;
+    background-color: rgba(0, 0, 160, 0.873);
+    justify-content: space-between;
+    align-items: center;
+
+}
+.header{
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    padding:1rem 0 2rem 4rem;
+}
+.search-form{
+    padding: 1rem 4rem 2rem 0;
+}
+form{
+    display:flex;
+    gap:0;
+    padding:0;
+    margin:0;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#search{
+    width:30rem;
+    height:3.5rem;
+    font-size: larger;
+    padding-left:2rem;
+    
+    border-top-left-radius: 25px;
+    border-bottom-left-radius:25px;
+    font-weight:bold;
+    letter-spacing: 5px;
+}
+#submit{
+    font-size: larger;
+    color:white;
+    background-color: black;
+    font-weight: bold;
+    border-top-right-radius:25px;
+    border-bottom-right-radius:25px;
+    padding-right:1rem;
+    letter-spacing: 3px;
+}
+.loading{
+    width:100%;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    color:white;
+    padding: 20px;  
+}
+.weatherGrid{
+    display:grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    gap: 5rem;
+    padding:5rem;
+    background-color: black;
+}
+#day1{
+    grid-column: 1/4;
+    grid-row:1/2;
+}
+.today{
+    background-color: rgb(168, 168, 109);
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color:white;
+}
+.today .other{
+    display:flex;
+    flex-direction: row;
+}
+.others{
+    background-color: rgb(110, 216, 216);
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    font-size: 2rem;
+    color:white;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.temp{
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+}
+.other{
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100%;
+    
+}
+.sun{
+    display:flex;
+    flex-direction: column;
+}
+.humidity{
+    display: flex;
+    flex-direction: column;
+}
+.temp{
+    display:flex;
+    flex-direction: column;
+}
